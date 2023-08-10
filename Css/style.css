@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Archivo', sans-serif;
+}
+
+:root{
+    --bg-color : #e1dedb;
+    --black : #1a1a1a;
+    --white : #fff;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    background: var(--bg-color);
+    position: relative;
+}
+
+.container .navbar{
+    width: 100%;
+    height: 70px;
+}
+
+.navbar nav{
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav .left-nav-con{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+nav .right-nav-con{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar_icon{
+    font-size: 26px;
+    cursor: pointer;
+}
+.user_icon{
+    font-size: 23px;
+    cursor: pointer;
+}
+.search_icon{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+/* ===================================PAGE ONE START` */
+
+.page-one{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 100vh;
+    width: 80%;
+}
+
+.page-one .page-one-right img{
+    width: 640px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.page-one .page-one-left h1:nth-child(1){
+    font-size: 5vw;
+    margin-top: 100px;
+    margin-left: 250px;
+    font-weight: 700;
+    transform: scaleX(1.4);
+} 
+
+.page-one span{
+    color: white;
+}
+
+.navbar-con{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: red;
+    position: relative;
+    z-index:2 ;
+}
+
+.navbar-con .side-bar{
+    width: 60%;
+    height: 100%;
+    background-color:var(--black);
+}
+
+.side-bar ul{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.side-bar ul li a{
+    text-decoration: none;
+    font-size: 70px;
+    color: var(--white);   
+    transition: .4s ease-in-out; 
+}
+.side-bar ul li {
+    font-weight: 100;
+    transform: scaleX(1.2);
+    margin-top: 20px;
+}
+
+.side-bar ul li :hover{
+    color: #bf8c4e;
+}
+
+.right-nav-img{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    /* background-color: #1a1a1a; */
+}
+
+.right-nav-img img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.show-case img{
+    display: none;
+    position: absolute;
+    top: 0;
+}
