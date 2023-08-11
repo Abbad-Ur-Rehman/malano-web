@@ -15,14 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;600;700&family=Jost:wght@300;500;700;900&family=Lato:wght@100;300&family=Montserrat:ital,wght@0,500;0,600;0,900;1,700&family=Pacifico&family=Poppins:ital,wght@0,300;0,500;0,900;1,100&display=swap"
         rel="stylesheet" />
 
-    <!-- BOOTSTRAP-->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
-      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -31,32 +23,144 @@
 
 <body>
     <div class="container">
-        <div class="navbar-con">
-            <div class="side-bar">
-                <ul>
-                    <li><a href="#">Hoodies</a></li>
-                    <li><a href="#">Sweatshirt</a></li>
-                    <li><a href="#">Shirts</a></li>
-                    <li><a href="#">T-shirts</a></li>
-                    <li><a href="#">Jackets</a></li>
-                </ul>
-            </div>
+        <!-- ========================================LOGIN FORM START -->
+        <div id="container" class="container2">
+            <i class="fa-brands fa-x" id="close-login"></i>
+            <!-- FORM SECTION -->
+            <div class="row">
+                <!-- SIGN UP -->
+                <div class="col align-items-center flex-col sign-up">
+                    <div class="form-wrapper align-items-center">
+                        <div class="form sign-up">
+                            <div class="input-group">
+                                <i class='bx bxs-user'></i>
+                                <input type="text" placeholder="Username" id="user-sign">
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bx-mail-send'></i>
+                                <input type="email" placeholder="Email" id="email-sign">
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" placeholder="Password" id="password-sign">
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" placeholder="Confirm password" id="confirmPassword-sign">
+                            </div>
+                            <button id="siginUpBtn">
+                                Sign up
+                            </button>
+                            <p>
+                                <span>
+                                    Already have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Sign in here
+                                </b>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="right-nav-img">
-                <img src="./Assts/asset 12.jpeg" alt="">
-                <div class="show-case">
-                    <img src="./Assts/asset 3.jpeg" alt="" id="hooides">
-                    <img src="./Assts/asset 4.jpeg" alt="" id="Sweatshirt">
-                    <img src="./Assts/asset 6.jpeg" alt="" id="shirts">
-                    <img src="./Assts/asset 5.jpeg" alt="" id="tshirts">
-                    <img src="./Assts/asset 7.jpeg" alt="" id="jackets">
+                </div>
+                <!-- END SIGN UP -->
+                <!-- SIGN IN -->
+                <div class="col align-items-center flex-col sign-in">
+                    <div class="form-wrapper align-items-center">
+                        <div class="form sign-in">
+                            <div class="input-group">
+                                <i class='bx bxs-user'></i>
+                                <input type="text" placeholder="Username" id="login-user">
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" placeholder="Password" id="login-password">
+                            </div>
+                            <button id="loginBtn">
+                                Sign in
+                            </button>
+                            <p>
+                                <b>
+                                    Forgot password?
+                                </b>
+                            </p>
+                            <p>
+                                <span>
+                                    Don't have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Sign up here
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+
+                    </div>
+                </div>
+                <!-- END SIGN IN -->
+            </div>
+            <!-- END FORM SECTION -->
+            <!-- CONTENT SECTION -->
+            <div class="row content-row">
+                <!-- SIGN IN CONTENT -->
+                <div class="col align-items-center flex-col">
+                    <div class="text sign-in">
+                        <h2>
+                            Welcome
+                        </h2>
+
+                    </div>
+                    <div class="img sign-in">
+
+                    </div>
+                </div>
+                <!-- END SIGN IN CONTENT -->
+                <!-- SIGN UP CONTENT -->
+                <div class="col align-items-center flex-col">
+                    <div class="img sign-up">
+
+                    </div>
+                    <div class="text sign-up">
+                        <h2>
+                            Join with us
+                        </h2>
+
+                    </div>
+                </div>
+                <!-- END SIGN UP CONTENT -->
+            </div>
+            <!-- END CONTENT SECTION -->
+        </div>
+        <!-- ======================================LOGIN FORM END -->
+        <div class="navbar-hide" id="navbar-hide">
+            <div class="navbar-con">
+                <div class="side-bar">
+                    <i class="fa-brands fa-x close2"></i>
+                    <ul>
+                        <li><a href="#" id="hd">Hoodies</a></li>
+                        <li><a href="#" id="ss">Sweatshirt</a></li>
+                        <li><a href="#" id="s">Shirts</a></li>
+                        <li><a href="#" id="ts">T-shirts</a></li>
+                        <li><a href="#" id="j">Jackets</a></li>
+                    </ul>
+                </div>
+
+                <div class="right-nav-img">
+                    <img src="./Assts/asset 12.jpeg" alt="">
+                    <div class="show-case">
+                        <img src="./Assts/asset 3.jpeg" alt="" id="hooides">
+                        <img src="./Assts/asset 4.jpeg" alt="" id="Sweatshirt">
+                        <img src="./Assts/asset 5.jpeg" alt="" id="shirts">
+                        <img src="./Assts/asset 6.jpeg" alt="" id="tshirts">
+                        <img src="./Assts/asset 7.jpeg" alt="" id="jackets">
+                    </div>
                 </div>
             </div>
-   
         </div>
         <!-- NAVBAR END ==================================================== -->
-        <div class="navbar">
-            <nav>
+        <div class="navbar" id="navbar1">
+            <nav id="nav">
                 <div class="left-nav-con">
                     <div class="logo">
                         <h1>Malano</h1>
@@ -72,7 +176,7 @@
                     </div>
 
                     <div class="user_icon">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user" id="login"></i>
                     </div>
             </nav>
         </div>
@@ -82,28 +186,226 @@
         <section class="page-one">
 
             <div class="page-one-left">
-                <h1><span>GET</span><br>
-                  <span>  YOURSELF</span> <br>INTO THE
-                    <br> RIGHT GEAR
+                <h1><span style="color: black;">GET</span><br>
+                    <span style="color: black;"> YOURSELF</span> <br>
+                    <span>INTO THE</span>
+                    <br> <span> RIGHT GEAR</span>
                 </h1>
             </div>
-            <div class="page-one-right">
-                <img src="./Assts/asset 31.jpeg" alt="">
+            <div class="page-one-right" id="img1">
+                <img src="./Assts/asset 31.jpeg" alt="" id="img2">
             </div>
-        </section>    
-        
+        </section>
         <!-- 1ST PAGE END ==================================================== -->
+
+        <!-- 2ST PAGE START ==================================================== -->
+        <section class="page-two">
+            <div class="container">
+                <div class="onebox" id="onebox1">
+                    <img src="./Assts/asset 3.jpeg" alt="" class="box">
+                    <h1>Hoodies</h1>
+                </div>
+                <div class="onebox" id="onebox2">
+                    <img src="./Assts/asset 4.jpeg" alt="" class="box">
+                    <h1>Sweatshirts</h1>
+                </div>
+                <div class="onebox" id="onebox3">
+                    <img src="./Assts/asset 5.jpeg" alt="" class="box">
+                    <h1>Shirts</h1>
+                </div>
+                <div class="onebox" id="onebox4">
+                    <img src="./Assts/asset 6.jpeg" alt="" class="box">
+                    <h1>T-Shirts</h1>
+                </div>
+                <div class="onebox" id="onebox5">
+                    <img src="./Assts/asset 7.jpeg" alt="" class="box">
+                    <h1>Jackets</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2ST PAGE END ==================================================== -->
+        <!-- 3RD PAGE START ==================================================== -->
+        <section class="page-three">
+            <div class="container">
+                <div class="top-text">
+                    <h1 class="text-one">
+                        <span class="one">NEWEST</span>
+                        <br>
+                        <span style="color: white;" class="two">PRODUCTS</span>
+                    </h1>
+                    <div class="top-para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Ut unde quo quis, dicta nam enim
+                            sed optio itaque magnam doloremque hic sit laborum
+                            doloribus impedit.</p>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 14.jpeg" alt="" id="pic1">
+                        <img src="./Assts/asset 15.jpeg" alt="" id="back1" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 25.jpeg" alt="" id="pic2">
+                        <img src="./Assts/asset 24.jpeg" alt="" id="back2" class="scndimg">
+
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 19.jpeg" alt="" id="pic3">
+                        <img src="./Assts/asset 18.jpeg" alt="" id="back3" class="scndimg">
+
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 20.jpeg" alt="" id="pic4">
+                        <img src="./Assts/asset 21.jpeg" alt="" id="back4" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-bottom">
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 16.jpeg" alt="" id="pic5">
+                        <img src="./Assts/asset 17.jpeg" alt="" id="back5" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 22.jpeg" alt="" id="pic6">
+                        <img src="./Assts/asset 23.jpeg" alt="" id="back6" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 25.jpeg" alt="" id="pic7">
+                        <img src="./Assts/asset 24.jpeg" alt="" id="back7" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 20.jpeg" alt="" id="pic8">
+                        <img src="./Assts/asset 21.jpeg" alt="" id="back8" class="scndimg">
+
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- 3RD PAGE END ==================================================== -->
+
+        <!-- 4TH PAGE START ==================================================== -->
+        <section class="page-four">
+            <div class="container">
+                <div class="logo">
+                    <h1>M</h1>
+                </div>
+                <div class="text">
+                    <h1>Find out about the <br>sales at your local shop</h1>
+                    <button class="shops">
+                        FIND MORE SALES
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <!-- 4TH PAGE END ==================================================== -->
+        <!-- 5TH PAGE START ==================================================== -->
+        <section class="page-five">
+            <div class="container">
+                <div class="top-text">
+                    <h1 class="text-one">
+                        <span class="one2">SEASON'S</span>
+                        <br>
+                        <span style="color: white;" class="two2">TRENDING</span>
+                    </h1>
+                    <div class="top-para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Ut unde quo quis, dicta nam enim
+                            sed optio itaque magnam doloremque hic sit laborum
+                            doloribus impedit.</p>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 14.jpeg" alt="" id="picbtm1">
+                        <img src="./Assts/asset 15.jpeg" alt="" id="backbtm1" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 25.jpeg" alt="" id="picbtm2">
+                        <img src="./Assts/asset 24.jpeg" alt="" id="backbtm2" class="scndimg">
+
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 19.jpeg" alt="" id="picbtm3">
+                        <img src="./Assts/asset 18.jpeg" alt="" id="backbtm3" class="scndimg">
+
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                    <div class="showcase-img">
+                        <img src="./Assts/asset 20.jpeg" alt="" id="picbtm4">
+                        <img src="./Assts/asset 21.jpeg" alt="" id="backbtm4" class="scndimg">
+                        <div class="rates">
+                            <h4>Crew New Shirt</h4>
+                            <h4>90$</h4>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- 5TH PAGE END ==================================================== -->
 
 
     </div>
 
 
     <!-- JAVASCRIPT LINK -->
+    <!-- JQUARY CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GASP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- SCROLL TRIGGER CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Js/script.js"></script>
-    <!-- BOOTSTRAP CDN -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
-        integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 
 </html>
