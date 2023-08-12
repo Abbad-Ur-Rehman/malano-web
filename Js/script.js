@@ -343,6 +343,34 @@ setTimeout(() => {
         userStoredData.push({userName,userEmail,userPassword,userConfirmPassword});
         localStorage.setItem('allData', JSON.stringify(userStoredData));
 
+        let lodingScreen = document.querySelector('.ringMain');
+        lodingScreen.style.display= 'block';
+        gsap.from('.ringMain',{
+           opacity:0,
+           y:-70,
+       });
+
+        setTimeout(()=>{
+            let lodingScreen = document.querySelector('.ringMain');
+               lodingScreen.style.display= 'none';
+           },1000);
+
+           setTimeout(()=>{
+            let success = document.querySelector('.pop-up');
+            success.style.transform = 'translateY(0)'
+            document.getElementById('ik').innerHTML = 'YOUR DATA HAS BEEN SAVED '
+        },1500)
+       
+        setTimeout(()=>{
+            let success = document.querySelector('.pop-up');
+            // console.log(success.innerHTML)
+            success.style.transform = 'translateY(-100%)' ;
+        },4000)
+
+        userUserConfirmPassword.value = '';
+        userUserName.value = '';
+        userUserEmail.value = '';
+        userUserPassowrd.value = '';
     })
 // ====================================================MAKING SINGUP FORM LOGIC END
 
@@ -359,24 +387,87 @@ setTimeout(() => {
             console.log(oldData)
             var matchedUser = null;
             oldData.forEach((Element)=>{
-                if(Element.userName === loginUser || Element.userPassword === loginPassword){
+                if(Element.userName === loginUser && Element.userPassword === loginPassword){
                     matchedUser = Element
                 }
             })
-        })
-        var matchedUser = null;
+            if(matchedUser){
+                setTimeout(()=>{
+                    let success = document.querySelector('.pop-up');
+                    success.style.transform = 'translateY(0)'
+                },2500)
+               
+                setTimeout(()=>{
+                    let success = document.querySelector('.pop-up');
+                    success.style.transform = 'translateY(-100%)' 
+                },4000)
+                
+                setTimeout(()=>{
+                 let lodingScreen = document.querySelector('.ringMain');
+                    lodingScreen.style.display= 'none';
+                },2000);
 
-        if(matchedUser){
-            alert('welcome')
-        }else{
-            let pageTwoImg = document.querySelectorAll('.box')
-                 pageTwoImg.forEach((box)=>{
-                box.addEventListener('click',()=>{
-                alert('login please')
-                })
-            })
-        }
-        
+                setTimeout(() => {
+                    loginForm.style.display = 'none'
+                }, 4500);
+
+                setTimeout(() => {
+                    loginBtn.style.display = 'none'
+                }, 4000);
+                
+                setTimeout(() => {
+                    let logoutBtn = document.querySelector('.none2');
+                    console.log(logoutBtn)
+                    logoutBtn.style.display ='block';
+                    gsap.from('.button_logout',{
+                        opacity:0,
+                        x:-70,
+                    });
+                }, 4000);
+
+                 let lodingScreen = document.querySelector('.ringMain');
+                 lodingScreen.style.display= 'block';
+                 gsap.from('.ringMain',{
+                    opacity:0,
+                    y:-70,
+                });
+
+                
+            }else{  
+          
+            }
+            
+        })
+
+        let logoutBtn = document.querySelector('.button_logout');
+        let yes = document.getElementById('yes')
+        let no = document.getElementById('no');
+        let sureOrNot = document.querySelector('.sure_or_not');
+        logoutBtn.addEventListener('click',()=>{
+            sureOrNot.style.display= 'block';
+            gsap.from('.sure_or_not',{
+                opacity:0,
+                y:-160,
+            });
+        });
+        yes.addEventListener('click',()=>{
+            sureOrNot.style.display= 'none';  
+            gsap.from('#login',{
+                opacity:0,
+                x:-160,
+            });
+            logoutBtn.style.display='none';
+            loginBtn.style.display='block';
+
+            setTimeout(()=>{
+                location.reload()
+            },300)
+
+        })
+        no.addEventListener('click',()=>{
+            sureOrNot.style.display= 'none';
+        })
+
 
 
 
@@ -521,3 +612,20 @@ gsap.from('#hd',{
     y:-90,
     duration:2
 })
+
+
+
+
+
+
+
+
+
+
+
+// let pageTwoImg = document.querySelectorAll('.box')
+// pageTwoImg.forEach((box)=>{
+// box.addEventListener('click',()=>{
+// alert('login please')
+// })
+// })
