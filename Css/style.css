@@ -903,5 +903,113 @@ nav .right-nav-con {
 
 
 
+/* FOOTER START HERE */
+footer{
+    /* margin-top: 100px; */
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    color: white;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.hr{
+
+    transform: scaleX(1.4);
+    color: white;
+    background-color: var(--black);
+    border-bottom: 1px solid rgba(129, 129, 129, 0.45);
+    /* margin-top:50px ; */
+    height: 100px;
+    line-height:3.2;
+    text-align: center;
+}
+
+.footer-inside{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.footer-left{
+    position: relative;
+    width: 40%;
+}
+
+.footer-left img{
+    width: 100%;
+    opacity: .3;
+ 
+}
+
+.text-footer-left{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    gap: 10px;
+}
+
+.uls{
+    transform: scaleX(1.2);
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .uls ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .2s all;
+ }
+
+ .uls ul li:hover {
+    color: grey;
+ }
+ .uls ul {
+    margin-left: 160px;
+    color: rgba(128, 128, 128, 0.53);
+ }
+
+ .catagory{
+    color: white;
+ }
+.logo3{
+    font-size: 26px;
+    /* margin-right: 80px; */
+    transform: scaleX(1.1);
+}
+.text-footer-left h3{
+    text-transform: uppercase;
+    font-size:29px;
+    width: 450px;
+    font-weight: 100;
+}
+.btn-footer button{
+    transform: scaleX(1.3);
+    background-color: transparent;
+    border: 1px solid white;
+    /* border: none; */
+    border-radius: 5px;
+    width: 240px;
+    height: 60px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .6s all;
+    color: white;
+}
+
+.btn-footer button:hover{
+    background-color: var(--bg-color);
+    color: black;
+}
 
 
+/* FOOTER END HERE */
