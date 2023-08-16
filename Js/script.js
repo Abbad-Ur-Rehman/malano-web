@@ -357,14 +357,14 @@ signUpBtn.addEventListener('click', () => {
 
     setTimeout(() => {
         let success = document.querySelector('.pop-up');
-        success.style.transform = 'translateY(0)'
+        success.style.transform = 'translateX(0)'
         document.getElementById('ik').innerHTML = 'YOUR DATA HAS BEEN SAVED '
     }, 1500)
 
     setTimeout(() => {
         let success = document.querySelector('.pop-up');
         // console.log(success.innerHTML)
-        success.style.transform = 'translateY(-100%)';
+        success.style.transform = 'translateX(-100%)';
     }, 4000)
 
     userUserConfirmPassword.value = '';
